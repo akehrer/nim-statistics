@@ -421,7 +421,7 @@ proc cdf*(f: FDist, x: float): float =
 ## http://en.wikipedia.org/wiki/Chi-squared_distribution
 ## http://www.itl.nist.gov/div898/handbook/eda/section3/eda3666.htm
 
-type:
+type
   ChiSquareDist* = object
     nu: float
 
@@ -462,8 +462,8 @@ proc cdf*(c: ChiSquareDist, x: float): float =
 ## http://en.wikipedia.org/wiki/Exponential_distribution
 ## http://www.itl.nist.gov/div898/handbook/eda/section3/eda3667.htm
 
-type:
-  ExpDist* = object:
+type
+  ExpDist* = object
     mu, beta: float  ## location and scale parameters
 
 
