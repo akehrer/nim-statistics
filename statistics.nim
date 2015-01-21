@@ -92,7 +92,7 @@ proc standardDeviation*(x: openArray[float]): float =
   result = math.sqrt(math.variance(x))
 
 
-proc unbiasedVariance*(x: openArray[float]): float =
+proc unbiasedVariance*(x: openArray[float]): float {.cdecl, exportc: "unbiasedVariance", dynlib.} =
   ## Computes the unbiased estimate sample variance of `x`
   ## If the length of `x` is lest than 2, NaN is returned.
   result = 0.0
